@@ -1,0 +1,11 @@
+img = imread('testpattern512.tif');
+[P Q] = size(img);
+noise = randn(P,Q) + 0.25;
+
+noise_mild = noise*7;
+img_mild = double(img) + noise_mild;
+img_mild = img_mild / max(img_mild(:));
+
+
+imshow(img_mild);
+

@@ -1,0 +1,13 @@
+I = imread("rose1024.tif")
+imsize = size(I)
+maskSize = imsize/2
+center = imsize/2 %center of the image
+
+rUL = center(1) - maskSize(1)/2
+cUL = center(2) - maskSize(2)/2
+rLR = center(1) + maskSize(1)/2
+cLR = center(2) + maskSize(2)/2
+
+mask = mask4e(imsize(1), imsize(2), rUL, cUL, rLR, cLR)
+
+imshow(mask)

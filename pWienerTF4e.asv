@@ -1,0 +1,21 @@
+function W = pWienerTF4e(H,K)
+
+%one_by_H = 1 ./ (H);
+%H_square = abs(H) .* abs(H);
+%H_square_plus_K = H_square + K;
+
+%W = one_by_H .* (H_square ./ H_square_plus_K);
+sizeH = size(H);
+
+W = zeros(sizeH(1), sizeH(2));
+
+for u = 1:sizeH(1)
+    for v = 1:sizeH(2)
+        W(u,v) = (1/H(u,v))*(abs)
+    end
+end
+
+
+
+end
+

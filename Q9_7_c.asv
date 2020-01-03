@@ -1,0 +1,7 @@
+img_calc = imread('calculator-binary.tif');
+img_arrow = imread('calculator-binary-upper-arrow.tif');
+H_M_T_img = morphoHitmiss4e(img_calc, img_arrow, 0, 'same');
+B = [1 1 1; 1 1 1; 1 1 1];
+DG = morphoGeoDilate4e(H_M_T_img, img_calc, B, 100);
+figure(1);
+imshow(DG);

@@ -1,0 +1,5 @@
+img = imread('boy-blurred.tif');
+[P Q] = size(img)
+img_p = padarray(img,[P*2 Q*2],0,'post');
+H = motionBlurTF4e(P*3, Q*3, 0.1, -0.1, 1);
+dftFiltering4e()
